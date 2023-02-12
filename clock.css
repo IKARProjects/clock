@@ -1,0 +1,149 @@
+body {
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  animation:changeColor infinite linear 30s;
+}
+ @keyframes changeColor{
+  from{background-color: black;}
+  to{background-color: yellow;}
+  to{background-color:black;}
+  to{background-color: yellow;}
+  to{background-color: black;}
+} 
+
+.clock-container {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: orange; */
+  width: 450px;
+  height: 450px;
+}
+
+.clock-face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  /* background-color: aqua; */
+}
+
+.clock-center {
+  position: absolute;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: yellow;
+  z-index: 11;
+  /* display: flex; */
+}
+
+.hand {
+  z-index: 10;
+  --rotation: 30;
+  position: absolute;
+  left: 50%;
+  bottom: 49%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.hand.hour {
+  border: solid yellow 1px;
+  height: 210px;
+  width: 5px;
+  background-color: cyan;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.hand.minute {
+  border: solid yellow 1px;
+  height: 275px;
+  width: 5px;
+  background-color: cyan;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.hand.second {
+  border: top 80px;
+  border: solid yellow 1px;
+  height: 180px;
+  width: 2px;
+  background-color: red;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.number {
+  --rotation: 0;
+  transform: rotate(var(--rotation));
+  position: absolute;
+  text-align: center;
+  font-size: 70px;
+  width: 770px;
+  height: 770px;
+}
+
+.twelve {
+  color: yellow;
+}
+
+.one {
+  color: cyan;
+  --rotation: 30deg;
+}
+.two {
+  color: cyan;
+
+  --rotation: 60deg;
+}
+.three {
+  color: yellow;
+
+  --rotation: 90deg;
+}
+.four {
+  color: cyan;
+
+  --rotation: 120deg;
+}
+.five {
+  color: cyan;
+
+  --rotation: 150deg;
+}
+.six {
+  color: yellow;
+
+  --rotation: 180deg;
+}
+.seven {
+  color: cyan;
+
+  --rotation: 210deg;
+}
+.eight {
+  color: cyan;
+
+  --rotation: 240deg;
+}
+.nine {
+  color: yellow;
+  --rotation: 270deg;
+}
+.ten {
+  color: cyan;
+
+  --rotation: 300deg;
+}
+.eleven {
+  color: cyan;
+
+  --rotation: 330deg;
+}
