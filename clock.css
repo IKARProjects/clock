@@ -5,17 +5,20 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  
   animation: changeColor infinite alternate 30s;
 }
 
 .clock-container {
+  position: absolute;
+  left: 21%;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: orange; */
-  width: 450px;
-  height: 450px;
+  width: 850px;
+  height: 850px;
 }
 
 .clock-face {
@@ -77,9 +80,9 @@ body {
   transform: rotate(var(--rotation));
   position: absolute;
   text-align: center;
-  font-size: 70px;
-  width: 770px;
-  height: 770px;
+  font-size: 60px;
+  width: 750px;
+  height: 750px;
 }
 
 .twelve {
