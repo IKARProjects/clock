@@ -140,3 +140,24 @@ body {
   --rotation: 330deg;
 }
 
+
+
+
+.digitalClockContainer {
+  width: 150px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  margin: 5px;
+  background-color: black;
+  color: cyan;
+  font-size: xx-large;
+}
+.colon{
+  color: yellow;
+  font-size: xx-large;
+}

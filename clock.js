@@ -4,6 +4,7 @@ const hour = document.querySelector('[data-hour]');
 const minute = document.querySelector('[data-minute]');
 const second = document.querySelector('[data-second]');
 
+
 function setClock() {
     //time ratios
     const currentDate = new Date()
@@ -14,13 +15,29 @@ function setClock() {
     setRotation(minute, minutesRatio);
     setRotation(hour, hoursRatio);
     setRotation(second,secondsRatio );
-
-    console.log(second);
+    
 }
-
-
 
 function setRotation(element, rotationRatio) {
     element.style.setProperty('--rotation', rotationRatio * 360)
 }
-// setClock()
+
+
+//digital
+
+function setDigitalclock(){
+    const time= new Date()
+    const hoursCount=time.getHours()
+    const minutesCount=time.getMinutes()
+    const secondsCount=time.getSeconds()
+
+    hours = document.getElementById('hours').innerHTML=hoursCount
+    minutes = document.getElementById('minutes').innerHTML=minutesCount
+    seconds = document.getElementById('seconds').innerHTML=secondsCount
+   
+
+}
+
+
+
+setInterval(setDigitalclock,1000)
