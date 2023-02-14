@@ -1,4 +1,5 @@
 setInterval(setClock, 1000)
+setInterval(setDigitalclock,1000)
 //elements
 const hour = document.querySelector('[data-hour]');
 const minute = document.querySelector('[data-minute]');
@@ -27,17 +28,13 @@ function setRotation(element, rotationRatio) {
 
 function setDigitalclock(){
     const time= new Date()
-    const hoursCount=time.getHours()
-    const minutesCount=time.getMinutes()
-    const secondsCount=time.getSeconds()
+    const  hoursCount = ('0'+time.getHours()).slice(-2);
+    const minutesCount = ('0'+time.getMinutes()).slice(-2);
+    const secondsCount = ('0'+time.getSeconds()).slice(-2);
 
-    hours = document.getElementById('hours').innerHTML=hoursCount
-    minutes = document.getElementById('minutes').innerHTML=minutesCount
-    seconds = document.getElementById('seconds').innerHTML=secondsCount
-   
-
+    hrs = document.getElementById('hrs').innerHTML=hoursCount
+    min = document.getElementById('min').innerHTML=minutesCount
+    sec = document.getElementById('sec').innerHTML=secondsCount
+  
 }
 
-
-
-setInterval(setDigitalclock,1000)

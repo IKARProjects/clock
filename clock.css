@@ -5,7 +5,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  
   animation: changeColor infinite alternate 30s;
 }
 
@@ -67,7 +66,7 @@ body {
   border-top-right-radius: 100%;
 }
 .hand.second {
-  border:1px solid white ;
+  border: 1px solid white;
   height: 180px;
   width: 2px;
   background-color: red;
@@ -77,6 +76,7 @@ body {
 
 .number {
   --rotation: 0;
+  font-style: oblique;
   transform: rotate(var(--rotation));
   position: absolute;
   text-align: center;
@@ -142,15 +142,12 @@ body {
 
   --rotation: 330deg;
 }
-
-
-
-
+/* digital */
 .digitalClockContainer {
   border-radius: 5px;
   border: 3px solid cyan;
   position: relative;
-  right:50px;
+  right: 50px;
   width: 170px;
   height: 47px;
   display: flex;
@@ -161,10 +158,20 @@ body {
 .time {
   margin: 5px;
   background-color: black;
-  color: cyan;
-  font-size: 40px;
-}
-.colon{
   color: yellow;
+  font-size: 40px;
+  font-style: oblique;
+}
+#hours {
+  width: 50px;
+}
+#minutes {
+  width: 80px;
+}
+#seconds {
+  width: 50px;
+}
+.colon {
+  color: cyan;
   font-size: xx-large;
 }
