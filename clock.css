@@ -1,43 +1,32 @@
 body {
+  height: 100vh;
   overflow: hidden;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  animation: changeColor infinite alternate 30s;
 }
 
 .clock-container {
-  position: absolute;
-  left: 21%;
+  height: 550px;
+  width: 550px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: orange; */
-  width: 850px;
-  height: 850px;
-}
-
-.clock-face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  /* background-color: aqua; */
 }
 
 .clock-center {
-  position: absolute;
+  position: relative;
   border-radius: 50%;
   height: 25px;
   width: 25px;
   background-color: yellow;
-  z-index: 11;
-  /* display: flex; */
+  z-index: 14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hand {
@@ -51,7 +40,7 @@ body {
 }
 .hand.hour {
   border: solid yellow 1px;
-  height: 200px;
+  height: 120px;
   width: 3px;
   background-color: cyan;
   border-top-left-radius: 100%;
@@ -59,7 +48,7 @@ body {
 }
 .hand.minute {
   border: solid yellow 1px;
-  height: 260px;
+  height: 170px;
   width: 3px;
   background-color: cyan;
   border-top-left-radius: 100%;
@@ -67,7 +56,7 @@ body {
 }
 .hand.second {
   border: 1px solid white;
-  height: 180px;
+  height: 120px;
   width: 2px;
   background-color: red;
   border-top-left-radius: 100%;
@@ -81,8 +70,8 @@ body {
   position: absolute;
   text-align: center;
   font-size: 60px;
-  width: 750px;
-  height: 750px;
+  width: 550px;
+  height: 550px;
 }
 
 .twelve {
@@ -134,12 +123,10 @@ body {
 }
 .ten {
   color: cyan;
-
   --rotation: 300deg;
 }
 .eleven {
   color: cyan;
-
   --rotation: 330deg;
 }
 /* digital */
@@ -147,22 +134,24 @@ body {
   border-radius: 5px;
   border: 3px solid cyan;
   position: relative;
-  right: 50px;
-  width: 170px;
-  height: 47px;
+  right: 190px;
+  width: 100px;
+  height: 27px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 5px;
-  background-color: black;
   color: yellow;
-  font-size: 40px;
+  font-size: 20px;
   font-style: oblique;
 }
-#hours {
+/* #hours {
   width: 50px;
 }
 #minutes {
@@ -170,8 +159,9 @@ body {
 }
 #seconds {
   width: 50px;
-}
+ } */
 .colon {
+ 
   color: cyan;
   font-size: xx-large;
 }
